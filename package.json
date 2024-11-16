@@ -1,0 +1,22 @@
+{
+    "name": "developer-portfolio",
+    "version": "1.0.0",
+    "description": "A simple Node.js application to serve a developer portfolio page.",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "keywords": [
+      "nodejs",
+      "portfolio",
+      "express",
+      "html",
+      "docker"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+      "express": "^4.18.4"
+    }
+  }
+  

@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  app1:
+    build: .
+    container_name: portfolio-app1
+    expose:
+      - "3000"
+
+  app2:
+    build: .
+    container_name: portfolio-app2
+    expose:
+      - "3000"
+
+  app3:
+    build: .
+    container_name: portfolio-app3
+    expose:
+      - "3000"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-loadbalancer
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
